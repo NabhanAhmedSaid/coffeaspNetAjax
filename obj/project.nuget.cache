@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "6wCGkapY+WoHqRYfnUA+0CACrwoQLNnAq+rRbs7Qwqi3r4qJaWZIh6wcAX2ht6HA1t3SoG1OfHV7H8/3UNOWPQ==",
+  "success": true,
+  "projectFilePath": "/home/kali/Desktop/aspNetAjax/CoffeeAjax/CoffeeAjax.csproj",
+  "expectedPackageFiles": [
+    "/home/kali/.nuget/packages/microsoft.netcore.app.ref/6.0.8/microsoft.netcore.app.ref.6.0.8.nupkg.sha512",
+    "/home/kali/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.8/microsoft.aspnetcore.app.ref.6.0.8.nupkg.sha512",
+    "/home/kali/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.8/microsoft.netcore.app.host.linux-x64.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

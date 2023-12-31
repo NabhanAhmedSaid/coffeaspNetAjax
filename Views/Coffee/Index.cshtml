@@ -1,0 +1,71 @@
+@{
+    ViewData["Title"] = "Index Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] </title>
+</head>
+<body>
+    @ViewData["Title"]
+    <button id="btnShow">Show Coffee</button>
+    <div id="div1"></div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+  $(document).ready(function () {
+
+    document.getElementById("btnShow").addEventListener("click",
+    function(){
+        $.ajax({
+        type: "GET",
+        url: "@Url.Action("GetCoffee")",
+        dataType: "json",
+        success: function (result) {
+
+           var text =  document.createElement('a');
+           text.textContent= result;
+            console.log(result);
+          
+           const para = document.createElement("p");
+           const node = document.createTextNode( Object.values(result));
+           para.appendChild(node);
+           const element = document.getElementById("div1");
+           element.appendChild(para);
+
+            
+        },
+        error: function (req, status, error) {
+            console.log(status, error);
+        }
+    });
+    })
+
+    function showCoffee(){
+   // GET request
+    
+    }
+ 
+
+    // POST request
+    $.ajax({
+        type: "POST",
+        url: "@Url.Action("PostCoffee")",
+        dataType: "json",
+        data: { name: "Nabhan" }, // Make sure to add a comma here
+        success: function (result) {
+            console.log(result);
+        },
+        error: function (req, status, error) {
+            console.log(status, error);
+        }
+    });
+});
+</script>
+
+</body>
+</html>
+
+
